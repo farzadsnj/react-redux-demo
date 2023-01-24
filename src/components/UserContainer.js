@@ -5,7 +5,7 @@ import { fetchUsers } from "../redux";
 function UserContainer({ userData, fetchUsers }) {
   useEffect(() => {
     fetchUsers();
-  }, []);
+  }, [fetchUsers]);
   return userData.loading ? (
     <h2>loading</h2>
   ) : userData.err ? (
@@ -16,7 +16,13 @@ function UserContainer({ userData, fetchUsers }) {
       <div>
         {userData &&
           userData.user &&
-          userData.user.map((user) => <p>{user.name}</p>)}
+          userData.user.map((user, index) => {
+            return (
+              <ol>
+                <p key={index}>{user.name}</p>
+              </ol>
+            );
+          })}
       </div>
     </div>
   );

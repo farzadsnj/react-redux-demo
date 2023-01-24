@@ -14,8 +14,7 @@ function ItemContainer(props) {
 const mapStateToProps = (state, ownProps) => {
   const itemState = ownProps.cake
     ? state.cake.numOfCakes
-    : state.cake.numOfIceCreams;
-
+    : state.iceCream.numOfIceCreams;
   return {
     item: itemState,
   };
@@ -24,11 +23,11 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   const dispatchFunction = ownProps.cake
     ? () => dispatch(buyCake())
-    : () => dispatch(buyIceCream);
+    : () => dispatch(buyIceCream());
 
   return {
     buyItem: dispatchFunction,
   };
 };
 
-export default connect(null, mapDispatchToProps)(ItemContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ItemContainer);
