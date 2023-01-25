@@ -17,11 +17,7 @@ function UserContainer({ userData, fetchUsers }) {
         {userData &&
           userData.user &&
           userData.user.map((user, index) => {
-            return (
-              <ol>
-                <p key={index}>{user.name}</p>
-              </ol>
-            );
+            return <p key={index}>{user.name}</p>;
           })}
       </div>
     </div>
