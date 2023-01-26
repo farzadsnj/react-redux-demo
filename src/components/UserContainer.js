@@ -7,7 +7,7 @@ function UserContainer({ userData, fetchUsers }) {
     fetchUsers();
   }, [fetchUsers]);
   return userData.loading ? (
-    <h2>loading</h2>
+    <h2>loading...</h2>
   ) : userData.err ? (
     <h2>{userData.err}</h2>
   ) : (

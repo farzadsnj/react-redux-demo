@@ -5,7 +5,7 @@ import userReducer from "./user/UserReducer";
 
 const rootReducer = combineReducers({
   cake: cakeReducer,
-  icecream: iceCreamReducer,
+  iceCream: iceCreamReducer,
   user: userReducer,
 });
 

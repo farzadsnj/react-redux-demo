@@ -11,10 +11,10 @@ export const fetchUserRequest = () => {
   };
 };
 
-const fetchUserSuccess = (user) => {
+const fetchUserSuccess = (users) => {
   return {
     type: FETCH_USER_SUCCESS,
-    payload: user,
+    payload: users,
   };
 };
 

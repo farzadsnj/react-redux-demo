@@ -14,13 +14,13 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <UserContainer />
-        <ItemContainer cake />
-        <ItemContainer iceCream />
-        <IceCreamContainer />
         <HooksCakeContainer />
         <CakeContainer />
+        <IceCreamContainer />
         <NewCakeContainer />
+        <ItemContainer cake />
+        <ItemContainer iceCream />
+        <UserContainer />
       </div>
     </Provider>
   );
